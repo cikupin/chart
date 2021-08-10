@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  gke-node-termination-handler:
+  - apiVersion: v2
+    appVersion: "679e048"
+    created: "2021-08-10T11:11:08.285606913Z"
+    description: Helm chart for gracefully handling GCE VM terminations in kubernetes
+      clusters
+    digest: 8cb6b753e120fd873863b31d75e94e861bfc71146efeddf1b4c3e99dd0e9bc17
+    name: gke-node-termination-handler
+    type: application
+    urls:
+    - https://github.com/cikupin/charts/releases/download/gke-node-termination-handler-0.0.1/gke-node-termination-handler-0.0.1.tgz
+    version: 0.0.1
+generated: "2021-08-10T11:11:08.285628313Z"

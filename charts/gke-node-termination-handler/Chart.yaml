@@ -1,0 +1,6 @@
+apiVersion: v2
+name: gke-node-termination-handler
+description: Helm chart for gracefully handling GCE VM terminations in kubernetes clusters
+type: application
+version: 0.0.1
+appVersion: "679e048"

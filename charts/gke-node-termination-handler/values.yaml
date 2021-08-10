@@ -1,0 +1,42 @@
+image:
+  # image.repository -- The image repository to pull from
+  repository: cikupin/gke-node-termination-handler
+  # image.tag -- The image tag to use
+  tag: 679e048cfc7c138859eb0613ba63580d982791be
+  # image.pullPolicy -- The image pull policy. We recommend not changing this
+  pullPolicy: Always
+
+# nameOverride -- A template override for name
+nameOverride: ""
+# fullnameOverride -- A template override for fullname
+fullnameOverride: ""
+
+daemonset:
+  updateStrategy:
+    # daemonset.updateStrategy.type -- The daemonset update strategy
+    type: RollingUpdate
+
+# resources -- A resource limit and requess block for the daemonset
+resources:
+  limits:
+    cpu: 150m
+    memory: 30Mi
+  requests:
+    cpu: 150m
+    memory: 30Mi
+
+# args -- Command arguments. Usually you don't need to override them.
+args:
+  - "-v=10"
+  - "--logtostderr"
+  - "--exclude-pods=$(POD_NAME):$(POD_NAMESPACE)"
+  - "--taint=cloud.google.com/impending-node-termination::NoSchedule"
+
+# extraArgs -- Extra arguments for command. For example, "--system-pod-grace-period=14s" to wait for 14s for regular pods to terminate.
+extraArgs: []
+
+# env -- Extra environment variables. For example "SLACK_WEBHOOK_URL"
+env:
+  SLACK_WEBHOOK_URL: ""
+
+hostNetwork: true

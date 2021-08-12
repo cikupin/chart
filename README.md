@@ -1,7 +1,5 @@
 # Cikupin Public Helm Chart
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
 This repo is intended for Cikupin's public helm chart. The code is provided as-is with no warranties.
 
 ## Usage
@@ -21,8 +19,3 @@ You can then run `helm search repo cikupin` to see the charts.
 
 <!-- Keep full URL links to repo files because this README syncs from main to gh-pages.  -->
 We'd love to have you contribute! Please refer to our [contribution guidelines](https://github.com/cikupin/charts/blob/main/CONTRIBUTING.md) for details.
-
-## License
-
-<!-- Keep full URL links to repo files because this README syncs from main to gh-pages.  -->
-[Apache 2.0 License](https://github.com/cikupin/charts/blob/main/LICENSE).
